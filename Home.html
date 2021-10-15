@@ -28,6 +28,10 @@ div
 section#TV
 {
 	float: left;
+
+	width: 700px;
+
+	margin-left: 15px;
 }
 
 
@@ -36,7 +40,7 @@ section#Player
 {
 	float: left;
 
-	margin-left: 50px;
+	margin-left: 20px;
 
 	width: 700px;
 }
@@ -47,15 +51,17 @@ section#select
 	float: left;
 
 	width: 40%;
+
+	margin-left: 20px;
 }
 
 section#plano
 {
 	float: left;
 
-	width: 40%;
+	width: 30%;
 
-	margin-left: 100px;
+	margin-left: 50px;
 
 }
 
@@ -69,7 +75,7 @@ div
 
 table#T_plano
 {
-	
+
 }
 
 </style>
@@ -83,7 +89,7 @@ table#T_plano
 
 
 
-<section id="TV">
+<section id="TV" class="border border-primary">
 	
 
 	<table class="table">
@@ -102,7 +108,7 @@ table#T_plano
 		    <tr>
 		      <th scope="col">quantidade</th>
 		      <th scope="col">TV</th>
-		      <th scope="col">Valor unitario</th>
+		      <th scope="col">Valor unitário</th>
 		      <th scope="col">Total</th>
 		    </tr>
 		</thead>
@@ -255,7 +261,7 @@ table#T_plano
 				      	v-model="quantidadeTV_10">
 			    	</td>
 
-			    	<td>Monitor LFD (tamanho definido por projeto)</td>
+			    	<td>Monitor LFD <br>(tamanho definido por projeto)</td>
 			    	<td>3000</td>
 			    	<td>{{ quantidadeTV_10*3000 }}</td>
 			    </tr>
@@ -278,7 +284,7 @@ table#T_plano
 
 			    <tr class="table-primary">
 			    	
-			    	<td >Valor Total: {{ Tv_valor_total() }}</td>
+			    	<td >Valor Total das Televisões: {{ Tv_valor_total() }}</td>
 			    	<td></td>
 			    	<td></td>
 			    	<td></td>
@@ -304,7 +310,7 @@ Valor completo: {{ Valor_total() }}
 
 
 
-<section id="Player">
+<section id="Player" class="border border-primary">
 	
 	<table class="table">
 		
@@ -323,7 +329,7 @@ Valor completo: {{ Valor_total() }}
 		    <tr>
 		    	<th scope="col">quantidade</th>
 		    	<th scope="col">Player</th>
-		    	<th scope="col">Valor Unitario</th>
+		    	<th scope="col">Valor unitário</th>
 		    	<th scope="col">Valor Total</th>
 			</tr>
 		</thead>
@@ -375,15 +381,19 @@ Valor completo: {{ Valor_total() }}
 	<section id="select">
 
 		<div id="inputs">
-		
+			
+			<div>
 			<select class="form-select" aria-label="Default select example">
 				<option selected>Metodo de pagamento</option>
 				<option value="1">Mensal</option>
 				<option value="2">Semanal</option>
 				<option value="3">Anual</option>
 			</select>
+			</div>
 
 
+
+			Custo de instalação
 			<div class="input-group mb-3">
 
 			  <span class="input-group-text" id="basic-addon1">R$</span>
@@ -456,7 +466,7 @@ Valor completo: {{ Valor_total() }}
 		    <tr>
 		      <th scope="col">Quantidade</th>
 		      <th scope="col">PLanos</th>
-		      <th scope="col">Valor unitario</th>
+		      <th scope="col">Valor unitário</th>
 		      <th scope="col">Total</th>
 		    </tr>
   		</thead>
@@ -503,7 +513,7 @@ Valor completo: {{ Valor_total() }}
 			    	
 <div class="p-3 mb-2 bg-success text-white">
 	
-Valor Total: {{ PL_valor_total() }}
+Valor Total(players, planos e custo de instalação): {{ PL_valor_total() }}
 
 </div>
 
@@ -599,8 +609,6 @@ var app6 = new Vue({
 	  	}
   }/// fim methods:
 })
-
-
 
 
 </script>
