@@ -59,7 +59,7 @@ section#plano
 {
 	float: left;
 
-	width: 30%;
+	width: 40%;
 
 	margin-left: 50px;
 
@@ -124,9 +124,17 @@ table#T_plano
 				      	v-model="quantidadeTV_01">
 			      	</td>
 			    	<td>TV 32 Polegadas</td>
-			    	<td>500</td>
 			    	<td>
-			    		{{ quantidadeTV_01*500 }}
+			    		<input
+				      	type="number"
+				      	value="0"
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_01">
+
+			    	</td>
+			    	<td>
+			    		{{ Multiplica_valores(quantidadeTV_01, Valor_TV_01) }}
 			  		</td>
 			    </tr>
 
@@ -134,15 +142,24 @@ table#T_plano
 			    	<td>
 				      	<input
 				      	type="number"
-				      	value='0'
+				      	value="0"
 				      	min='0'
 				      	step='1'
 				      	v-model="quantidadeTV_02">
 			      	</td>
 				    <td>TV 40 Polegadas</td>
-				    <td>750</td>
+
 				    <td>
-				    	{{ quantidadeTV_02*750 }}</td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_02">
+
+			    	</td>
+				    <td>
+				    	{{ Multiplica_valores(quantidadeTV_02, Valor_TV_02) }}</td>
 			    </tr>
 
 			    <tr>
@@ -155,8 +172,16 @@ table#T_plano
 			      	v-model="quantidadeTV_03">
 			    	</td>
 			    	<td>nomeTV 43 PolegadasTV</td>
-			    	<td>900</td>
-			    	<td>{{ quantidadeTV_03*900 }}</td>
+			    	<td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_03">
+
+			    	</td>
+			    	<td>{{ Multiplica_valores(quantidadeTV_03, Valor_TV_03) }}</td>
 			    </tr>
 
 
@@ -170,8 +195,16 @@ table#T_plano
 			      	v-model="quantidadeTV_04">
 			    	</td>
 			    	<td>TV 49 Polegadas</td>
-			    	<td>1100</td>
-			    	<td>{{ quantidadeTV_04*1100 }}</td>
+			    	<td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_04">
+
+			    	</td>
+			    	<td>{{ Multiplica_valores(quantidadeTV_04, Valor_TV_04) }}</td>
 			    </tr>
 
 
@@ -185,8 +218,16 @@ table#T_plano
 			      	v-model="quantidadeTV_05">
 			    	</td>
 			    	<td>TV 50 Polegadas</td>
-			    	<td>1200</td>
-			    	<td>{{ quantidadeTV_05*1200 }}</td>
+			    	<td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_05">
+
+			    	</td>
+			    	<td>{{ Multiplica_valores(quantidadeTV_05, Valor_TV_05) }}</td>
 			    </tr>
 
 
@@ -200,8 +241,16 @@ table#T_plano
 			      	v-model="quantidadeTV_06">
 			      </td>
 			      <td>TV 55 Polegadas</td>
-			      <td>1250</td>
-			      <td>{{ quantidadeTV_06*1250 }}</td>
+			      <td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_06">
+
+			    	</td>
+			      <td>{{ Multiplica_valores(quantidadeTV_06, Valor_TV_06) }}</td>
 			    </tr>
 
 			    <tr>
@@ -214,8 +263,16 @@ table#T_plano
 				      	v-model="quantidadeTV_07">
 			    	</td>
 			    	<td>TV 58 Polegadas</td>
-			    	<td>1350</td>
-			    	<td>{{ quantidadeTV_07*1350 }}</td>
+			    	<td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_07">
+
+			    	</td>
+			    	<td>{{ Multiplica_valores(quantidadeTV_07, Valor_TV_07) }}</td>
 			    </tr>
 
 
@@ -229,8 +286,16 @@ table#T_plano
 				      	v-model="quantidadeTV_08">
 			    	</td>
 			    	<td>TV 65 Polegadas</td>
-			    	<td>1675</td>
-			    	<td>{{ quantidadeTV_08*1675 }}</td>
+			    	<td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_08">
+
+			    	</td>
+			    	<td>{{ Multiplica_valores(quantidadeTV_08, Valor_TV_08) }}</td>
 			    </tr>
 
 
@@ -245,8 +310,16 @@ table#T_plano
 			    	</td>
 
 			    	<td>TV 75 Polegadas</td>
-			    	<td>1750</td>
-			    	<td>{{ quantidadeTV_09*1750 }}</td>
+			    	<td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_09">
+
+			    	</td>
+			    	<td>{{ Multiplica_valores(quantidadeTV_09, Valor_TV_09) }}</td>
 			    </tr>
 
 
@@ -262,8 +335,16 @@ table#T_plano
 			    	</td>
 
 			    	<td>Monitor LFD <br>(tamanho definido por projeto)</td>
-			    	<td>3000</td>
-			    	<td>{{ quantidadeTV_10*3000 }}</td>
+			    	<td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_10">
+
+			    	</td>
+			    	<td>{{ Multiplica_valores(quantidadeTV_10, Valor_TV_10) }}</td>
 			    </tr>
 
 
@@ -277,8 +358,16 @@ table#T_plano
 				      	v-model="quantidadeTV_11">
 			      	</td>
 			    	<td>Monitor Video Wall</td>
-			    	<td>3200</td>
-			    	<td>{{ quantidadeTV_11*3200 }}</td>
+			    	<td>
+			    		<input
+				      	type="number"
+				      	value='0'
+				      	min='0'
+				      	step='0.01'
+				      	v-model="Valor_TV_11">
+
+			    	</td>
+			    	<td>{{ Multiplica_valores(quantidadeTV_11, Valor_TV_11) }}</td>
 			    </tr>
 
 
@@ -344,8 +433,15 @@ Valor completo: {{ Valor_total() }}
 					v-model="quantidadePL_01">
 				</th>
 		    	<td>Player Alphasignage</td>
-		    	<td>292</td>
-		    	<td>{{ quantidadePL_01*292 }}</td>
+		    	<td>
+		    		<input
+					type="number"
+					value='0'
+					min='0'
+					step='0.01'
+					v-model="Valor_PL_01">
+		    	</td>
+		    	<td>{{ Multiplica_valores(quantidadePL_01, Valor_PL_01) }}</td>
 		    </tr>
 
 		    <tr>
@@ -358,8 +454,15 @@ Valor completo: {{ Valor_total() }}
 					v-model="quantidadePL_02">
 		    	</th>
 		    	<td>Player Alphasignage Secundário</td>
-		    	<td>249</td>
-		    	<td>{{ quantidadePL_02*249 }}</td>
+		    	<td>
+		    		<input
+					type="number"
+					value='0'
+					min='0'
+					step='0.01'
+					v-model="Valor_PL_02">
+		    	</td>
+		    	<td>{{ Multiplica_valores(quantidadePL_02, Valor_PL_02) }}</td>
 		    </tr>
 		    <tr>
 		    	<th scope="row">
@@ -371,8 +474,17 @@ Valor completo: {{ Valor_total() }}
 					v-model="quantidadePL_03">
 		    	</th>
 		    	<td>TV Box</td>
-		    	<td>700</td>
-		    	<td>{{ quantidadePL_03*700 }}</td>
+		    	<td>
+		    		<input
+					type="number"
+					value='0'
+					min='0'
+					step='0.01'
+					v-model="Valor_PL_03">
+		    	</td>
+		    	<td>{{ Multiplica_valores(quantidadePL_03, Valor_PL_03) }}</td>
+
+
 		    </tr>
 
 		</tbody>
@@ -426,7 +538,9 @@ Valor completo: {{ Valor_total() }}
 			<tbody>
 				<tr>
 			      <th scope="row">Plano Bronze</th>
-			      <td>39</td>
+			      <td>
+			      39
+			      </td>
 			    </tr>
 
 			    <tr>
@@ -536,9 +650,15 @@ var app6 = new Vue({
   data: {
 
 
-  	quantidadeTV_01: '' ,quantidadeTV_02: '',quantidadeTV_03: '', quantidadeTV_04: '', quantidadeTV_05: '',
+  	quantidadeTV_01:0, quantidadeTV_02:0, quantidadeTV_03:0, quantidadeTV_04:0, quantidadeTV_05:0,
 
-  	quantidadeTV_06: '', quantidadeTV_07: '', quantidadeTV_08: '', quantidadeTV_09: '', quantidadeTV_10: '', quantidadeTV_11: '',
+  	quantidadeTV_06:0, quantidadeTV_07:0, quantidadeTV_08:0, quantidadeTV_09:0, quantidadeTV_10:0, quantidadeTV_11:0,
+
+  	//////
+
+  	Valor_TV_01:0 , Valor_TV_02: 0, Valor_TV_03: 0, Valor_TV_04: 0, Valor_TV_05: 0,
+
+  	Valor_TV_06: 0, Valor_TV_07: 0, Valor_TV_08: 0, Valor_TV_09: 0, Valor_TV_10: 0, Valor_TV_11: 0,
 
 
 
@@ -546,14 +666,24 @@ var app6 = new Vue({
   	//////
 
 
-  	quantidadePL_01: '', quantidadePL_02: '', quantidadePL_03: '',
+  	quantidadePL_01: 0, quantidadePL_02: 0, quantidadePL_03: 0,
 
   	//////
 
-  	plano:'', Quantidade_plano:'',
+
+
+  	Valor_PL_01: 0, Valor_PL_02: 0, Valor_PL_03: 0,
 
 
   	//////
+
+
+
+  	plano:0, Quantidade_plano:0,
+
+
+  	//////
+
 
   	Servico: 1000
 
@@ -562,49 +692,64 @@ var app6 = new Vue({
 
   methods:
   {
-	  	Tv_valor_total()
-	  	{
-	  		return (		
-	  			(this.quantidadeTV_01*500) +
-	  			(this.quantidadeTV_02*750)+
-	  			(this.quantidadeTV_03*900)+
-	  			(this.quantidadeTV_04*1100)+
-	  			(this.quantidadeTV_05*1200)+
-	  			(this.quantidadeTV_06*1250)+
-	  			(this.quantidadeTV_07*1350)+
-	  			(this.quantidadeTV_08*1675)+
-	  			(this.quantidadeTV_09*1750)+
-	  			(this.quantidadeTV_10*3000)+
-	  			(this.quantidadeTV_11*3200)
-	  		)
-	  	},/// fim Tv_valor_total()
 
-	  	PL_valor_total()
+  		Multiplica_valores(val1, val2)
 	  	{
-	  		return(
+	  		result=val1*val2;
 
-	  			(this.quantidadePL_01*292)+
-	  			(this.quantidadePL_02*249)+
-	  			(this.quantidadePL_03*700)+
-	  			(parseFloat(this.Servico))+
-	  			(this.Quantidade_plano * this.plano)
-	  		)
+	  		result=result.toFixed(2);
+
+	  		return (parseFloat(result))
+
 	  	},
 
 
 
+	  	Tv_valor_total()
+	  	{
 
+
+	  		result=(this.Multiplica_valores(this.quantidadeTV_01, this.Valor_TV_01))+
+		  			(this.Multiplica_valores(this.quantidadeTV_02, this.Valor_TV_02))+
+		  			(this.Multiplica_valores(this.quantidadeTV_03, this.Valor_TV_03))+
+		  			(this.Multiplica_valores(this.quantidadeTV_04, this.Valor_TV_04))+
+		  			(this.Multiplica_valores(this.quantidadeTV_05, this.Valor_TV_05))+
+		  			(this.Multiplica_valores(this.quantidadeTV_06, this.Valor_TV_06))+
+		  			(this.Multiplica_valores(this.quantidadeTV_07, this.Valor_TV_07))+
+		  			(this.Multiplica_valores(this.quantidadeTV_08, this.Valor_TV_08))+
+		  			(this.Multiplica_valores(this.quantidadeTV_09, this.Valor_TV_09))+
+		  			(this.Multiplica_valores(this.quantidadeTV_10, this.Valor_TV_10))+
+		  			(this.Multiplica_valores(this.quantidadeTV_11, this.Valor_TV_11));
+
+
+		  	result=result.toFixed(2);
+	  		return (result)
+	  		
+	  	},/// fim Tv_valor_total()
+
+	  	PL_valor_total()
+	  	{
+	  		result=(this.quantidadePL_01*this.Valor_PL_01)+
+	  			(this.quantidadePL_02*this.Valor_PL_02)+
+	  			(this.quantidadePL_03*this.Valor_PL_03)+
+	  			(parseFloat(this.Servico))+
+	  			(this.Quantidade_plano * this.plano);
+
+	  		result=result.toFixed(2);
+	  		return (result)
+
+	  
+	  	},
 
 
 
 	  	Valor_total()
 	  	{
-	  		return (
-	  			
-	  			parseFloat(this.PL_valor_total())+
-	  			parseFloat(this.Tv_valor_total())
 
-	  		)
+	  		result=parseFloat(this.PL_valor_total())+parseFloat(this.Tv_valor_total());
+
+	  		result=result.toFixed(2);
+	  		return (result)
 
 	  	}
   }/// fim methods:
