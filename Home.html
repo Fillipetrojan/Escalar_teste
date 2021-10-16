@@ -29,9 +29,9 @@ section#TV
 {
 	float: left;
 
-	width: 700px;
+	width: 660px;
 
-	margin-left: 15px;
+	margin-left: 10px;
 }
 
 
@@ -40,9 +40,9 @@ section#Player
 {
 	float: left;
 
-	margin-left: 20px;
+	margin-left: 10px;
 
-	width: 700px;
+	width: 660px;
 }
 
 
@@ -89,15 +89,13 @@ table#T_plano
 
 
 
-<section id="TV" class="border border-primary">
+<section id="TV" class="border border-primary"> <!-- section TELEVISÕES -->
 	
 
-	<table class="table">
+	<table class="table"> <!-- TABELA DAS TELEVISÕES -->
 
 		<thead class="table-dark">
-
 			<tr>
-		  	
 		  		<td>
 		  			Televisão
 		  		</td>
@@ -106,7 +104,7 @@ table#T_plano
 		  		<td></td>
 			</tr>
 		    <tr>
-		      <th scope="col">quantidade</th>
+		      <th scope="col">Quantidade</th>
 		      <th scope="col">TV</th>
 		      <th scope="col">Valor unitário</th>
 		      <th scope="col">Total</th>
@@ -115,7 +113,7 @@ table#T_plano
 			<tbody>
 
 			    <tr>
-			    	<td>
+			    	<td> <!-- INPUT DA QUANTIDADE DE TELEVISÃO-->
 				      	<input
 				      	type="number"
 				      	value='0'
@@ -124,7 +122,7 @@ table#T_plano
 				      	v-model="quantidadeTV_01">
 			      	</td>
 			    	<td>TV 32 Polegadas</td>
-			    	<td>
+			    	<td><!-- INPUT DO VALOR DA TELEVISÃ -->
 			    		<input
 				      	type="number"
 				      	value="0"
@@ -133,7 +131,7 @@ table#T_plano
 				      	v-model="Valor_TV_01">
 
 			    	</td>
-			    	<td>
+			    	<td><!-- Valor Total -->
 			    		{{ Multiplica_valores(quantidadeTV_01, Valor_TV_01) }}
 			  		</td>
 			    </tr>
@@ -171,7 +169,7 @@ table#T_plano
 			      	step='1'
 			      	v-model="quantidadeTV_03">
 			    	</td>
-			    	<td>nomeTV 43 PolegadasTV</td>
+			    	<td>TV 43 Polegadas</td>
 			    	<td>
 			    		<input
 				      	type="number"
@@ -387,7 +385,7 @@ table#T_plano
 
 
 
-<div class="p-3 mb-2 bg-primary text-white">
+<div class="p-3 mb-2 bg-primary text-white"><!-- Valor Total de todas as televisões -->
 
 
 Valor completo: {{ Valor_total() }}
@@ -399,7 +397,7 @@ Valor completo: {{ Valor_total() }}
 
 
 
-<section id="Player" class="border border-primary">
+<section id="Player" class="border border-primary"><!-- SECTION DOS PLAYERS -->
 	
 	<table class="table">
 		
@@ -416,14 +414,14 @@ Valor completo: {{ Valor_total() }}
 		  		<td></td>
 			</tr>
 		    <tr>
-		    	<th scope="col">quantidade</th>
+		    	<th scope="col">Quantidade</th>
 		    	<th scope="col">Player</th>
 		    	<th scope="col">Valor unitário</th>
 		    	<th scope="col">Valor Total</th>
 			</tr>
 		</thead>
 		<tbody>
-		    <tr>
+		    <tr><!-- INPUT DA QUANTIDADE DE PLAYERS -->
 		    	<th scope="row">
 		      		<input
 					type="number"
@@ -433,7 +431,7 @@ Valor completo: {{ Valor_total() }}
 					v-model="quantidadePL_01">
 				</th>
 		    	<td>Player Alphasignage</td>
-		    	<td>
+		    	<td><!-- INPUT DO VALOR DO PLAYER -->
 		    		<input
 					type="number"
 					value='0'
@@ -524,38 +522,72 @@ Valor completo: {{ Valor_total() }}
 	</section> <!-- section select -->
 
 
-	<section id="plano">
+	<section id="plano"><!-- SECTION DOS PLANOS -->
 
 		<table class="table">
 			Planos
 			<thead class="table-dark">
 				<tr>
-			    	<th scope="col">PLano</th>
+			    	<th scope="col">Plano</th>
 			    	<th scope="col">Valor mensal</th>
 			    </tr>
 			</thead>
 			  
 			<tbody>
 				<tr>
-			      <th scope="row">Plano Bronze</th>
-			      <td>
-			      39
-			      </td>
+			    <th scope="row">Plano Bronze</th>
+			    	<td><!-- INPUT DO VALOR DO PLANO -->
+					    <input type="number" class="form-control"
+						V-model="Plano_bronze"
+						min='0'
+						value="0" 
+						step="0.1" 
+						placeholder="00.00"
+						aria-label="Username"
+						aria-describedby="basic-addon1">
+			    	</td>
 			    </tr>
 
 			    <tr>
-			      <th scope="row">Plano Prata</th>
-			      <td>49</td>
+			    	<th scope="row">Plano Prata</th>
+			    	<td>
+					    <input type="number" class="form-control"
+						V-model="Plano_prata"
+						min='0'
+						value="0" 
+						step="0.1" 
+						placeholder="00.00"
+						aria-label="Username"
+						aria-describedby="basic-addon1">
+			    	</td>
 			    </tr>
 
 			    <tr>
 			      <th scope="row">Plano Ouro</th>
-			      <td>59</td>
+			      <td>
+					    <input type="number" class="form-control"
+						V-model="Plano_ouro"
+						min='0'
+						value="0" 
+						step="0.1" 
+						placeholder="00.00"
+						aria-label="Username"
+						aria-describedby="basic-addon1">
+			    	</td>
 			    </tr>
 
 			    <tr>
-			      <th scope="row">Plano Diamante</th>
-			      <td>72</td>
+			    	<th scope="row">Plano Diamante</th>
+			    	<td>
+						<input type="number" class="form-control"
+						V-model="Plano_diamante"
+						min='0'
+						value="0" 
+						step="0.1" 
+						placeholder="00.00"
+						aria-label="Username"
+						aria-describedby="basic-addon1">
+			    	</td>
 			    </tr>
 
 			</tbody>
@@ -579,7 +611,7 @@ Valor completo: {{ Valor_total() }}
 			</tr>
 		    <tr>
 		      <th scope="col">Quantidade</th>
-		      <th scope="col">PLanos</th>
+		      <th scope="col">Planos</th>
 		      <th scope="col">Valor unitário</th>
 		      <th scope="col">Total</th>
 		    </tr>
@@ -587,7 +619,7 @@ Valor completo: {{ Valor_total() }}
 		<tbody>
 
 	    	<tr>
-		    	<th scope="row">
+		    	<th scope="row"><!-- INPUT DA QUANTIDADE DE PLANOS -->
 		    		<input type="number" class="form-control"
 		    		v-model="Quantidade_plano"
 					min='0'
@@ -601,10 +633,10 @@ Valor completo: {{ Valor_total() }}
 			    <td>
 			    	<select class="form-select" aria-label="Default select example"
 			    	v-model="plano">
-						<option value="39">Bronze</option>
-						<option value="49">Prata</option>
-						<option value="59">Ouro</option>
-						<option value="72">Platina</option>
+						<option v-bind:value="Plano_bronze">Bronze</option>
+						<option v-bind:value="Plano_prata">Prata</option>
+						<option v-bind:value="Plano_ouro">Ouro</option>
+						<option v-bind:value="Plano_diamante">Diamante</option>
 					</select>
 			  	</td>
 
@@ -613,7 +645,7 @@ Valor completo: {{ Valor_total() }}
 		    	</td>
 
 		    	<td>
-		    		{{Quantidade_plano * plano}}
+		    		{{Multiplica_valores(Quantidade_plano, plano)}}
 		    	</td>
 	    	</tr>
 
@@ -625,9 +657,9 @@ Valor completo: {{ Valor_total() }}
 	</table>
 	
 			    	
-<div class="p-3 mb-2 bg-success text-white">
+<div class="p-3 mb-2 bg-success text-white"><!-- VALOR TOTAL DE TODOS OS ITENS -->
 	
-Valor Total(players, planos e custo de instalação): {{ PL_valor_total() }}
+Valor Total (players, planos e custos de instalações): {{ PL_valor_total() }}
 
 </div>
 
@@ -636,7 +668,6 @@ Valor Total(players, planos e custo de instalação): {{ PL_valor_total() }}
 <br>
 
 </div>
-
 
 
 
@@ -650,42 +681,113 @@ var app6 = new Vue({
   data: {
 
 
-  	quantidadeTV_01:0, quantidadeTV_02:0, quantidadeTV_03:0, quantidadeTV_04:0, quantidadeTV_05:0,
 
-  	quantidadeTV_06:0, quantidadeTV_07:0, quantidadeTV_08:0, quantidadeTV_09:0, quantidadeTV_10:0, quantidadeTV_11:0,
+
+  	//=======================================
+  	//=======================================
+  	// DECLARAÇÃO DE VARIAVEIS DAS TELEVISÕES
+  	//=======================================
+  	//=======================================
+
+  		//=======================================
+  		// input da quantidade de televisões
+  		//=======================================
+
+
+
+		  	quantidadeTV_01:0, quantidadeTV_02:0, quantidadeTV_03:0,
+
+		  	quantidadeTV_04:0, quantidadeTV_05:0, quantidadeTV_06:0,
+
+		  	quantidadeTV_07:0, quantidadeTV_08:0, quantidadeTV_09:0,
+
+		  	quantidadeTV_10:0, quantidadeTV_11:0,
+
+  		//========================================
+
+  	
+
+  		//=======================================
+  		// input dos preços de televisões
+  		//=======================================
+
+		  	Valor_TV_01:0 , Valor_TV_02: 0, Valor_TV_03: 0,
+
+		  	Valor_TV_04: 0, Valor_TV_05: 0, Valor_TV_06: 0,
+
+		  	Valor_TV_07: 0, Valor_TV_08: 0, Valor_TV_09: 0,
+
+		  	Valor_TV_10: 0, Valor_TV_11: 0,
+
+		//========================================
+
+	//=======================================
+  	//=======================================
+
 
   	//////
 
-  	Valor_TV_01:0 , Valor_TV_02: 0, Valor_TV_03: 0, Valor_TV_04: 0, Valor_TV_05: 0,
 
-  	Valor_TV_06: 0, Valor_TV_07: 0, Valor_TV_08: 0, Valor_TV_09: 0, Valor_TV_10: 0, Valor_TV_11: 0,
-
-
-
-
-  	//////
-
-
-  	quantidadePL_01: 0, quantidadePL_02: 0, quantidadePL_03: 0,
-
-  	//////
+  	//=======================================
+  	//=======================================
+  	// DECLARAÇÃO DE VARIAVEIS DOS PLAYERS
+  	//=======================================
+  	//=======================================
 
 
 
-  	Valor_PL_01: 0, Valor_PL_02: 0, Valor_PL_03: 0,
+  		//=======================================
+  		// input da quantidade de players
+  		//=======================================
 
 
-  	//////
+  			quantidadePL_01: 0, quantidadePL_02: 0, quantidadePL_03: 0,
+
+  		//=======================================
 
 
+  		//=======================================
+  		// input do valor dos players
+  		//=======================================
 
-  	plano:0, Quantidade_plano:0,
+  			Valor_PL_01: 0, Valor_PL_02: 0, Valor_PL_03: 0,
+
+  		//=======================================
+
+  	//=======================================
+  	//=======================================
+  	// DECLARAÇÃO DE VARIAVEIS DOS PLANOS
+  	//=======================================
+  	//=======================================
+
+  		//=======================================
+  		// quais são os planos
+  		//=======================================
+
+  			Plano_diamante:0,
+		  	Plano_ouro:0,
+		  	Plano_prata:0,
+		  	Plano_bronze:0,
 
 
-  	//////
+		//=======================================
+
+		//=======================================
+  		// PLano escolhido e quantidade
+  		//=======================================
 
 
-  	Servico: 1000
+  		plano:0, Quantidade_plano:0,
+
+  		//========================================
+
+  		//=======================================
+  		// Serviço (mão de obra)
+  		//=======================================
+
+			Servico: 1000
+
+		///======================================
 
   	
   },/// fim data
@@ -693,6 +795,11 @@ var app6 = new Vue({
   methods:
   {
 
+ 		/*
+ 		*	MULTIPLICA O PREÇO DO PRODUTO/PLANO PELA QUANTIDADE
+ 		*	E RETORNA O VALOR EM 2 CASAS DECIMAIS PARA QUE FIQUE
+ 		*	MAIS ORGANIZADO AO MOSTRAR NA TELA
+ 		*/
   		Multiplica_valores(val1, val2)
 	  	{
 	  		result=val1*val2;
@@ -703,8 +810,9 @@ var app6 = new Vue({
 
 	  	},
 
-
-
+	  	/*
+	  	*	SOMA OS VALORES DAS TELEVISÕES E PRINTA NA TELA
+	  	*/
 	  	Tv_valor_total()
 	  	{
 
@@ -727,6 +835,12 @@ var app6 = new Vue({
 	  		
 	  	},/// fim Tv_valor_total()
 
+
+
+	  	/*
+	  	*	SOMA OS VALORES DOS PLAYERS, MÃO DE OBRA,
+	  	*	PLANOS E PRINTA NA TELA
+	  	*/
 	  	PL_valor_total()
 	  	{
 	  		result=(this.quantidadePL_01*this.Valor_PL_01)+
@@ -742,7 +856,10 @@ var app6 = new Vue({
 	  	},
 
 
-
+	  	/*
+		*	SOMA OS VALORES DOS pl_valor_total() E
+		*	Tv_valor_total() E PRINTA NA TELA
+	  	*/
 	  	Valor_total()
 	  	{
 
@@ -761,3 +878,12 @@ var app6 = new Vue({
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
